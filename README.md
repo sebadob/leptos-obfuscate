@@ -17,7 +17,7 @@ span.obfuscate > span::after {
 }
 ```
 
-The component excepts an optional honeypot email address / link you can use, if you want to have a
+The component accepts an optional honeypot email address / link you can use, if you want to have a
 sophisticated setup and blacklist any sender that sends an E-Mail to it.
 
 The `delay_seconds` can be set as well. After this timeout, when mounted inside the browser,

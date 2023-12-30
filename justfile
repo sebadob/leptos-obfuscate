@@ -92,4 +92,3 @@ publish: verfiy-is-clean
     #!/usr/bin/env bash
     set -euxo pipefail
     cargo publish
-    
