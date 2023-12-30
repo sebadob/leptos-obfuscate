@@ -1,6 +1,6 @@
 # leptos-obfuscate
 
-This is for easy email address obfuscation to prevents bots and spammers.
+This is for easy email address obfuscation to prevent bots and spammers.
 
 Add the following to your CSS stylesheet:
 ```css
@@ -23,6 +23,13 @@ sophisticated setup and blacklist any sender that sends an E-Mail to it.
 The `delay_seconds` can be set as well. After this timeout, when mounted inside the browser,
 the honeypot address will be exchanged with the real one. This means the link will not work with
 HTML only, but there is no good way to prevent bots without Javascript / WASM.
+
+Then just use it like this:
+
+```notest
+let (email, _) = create_signal("mail@example.com".to_string());
+view! { <ObfuscateEmail email /> }
+```
 
 # Panics
 If the given String does not contain '@'
