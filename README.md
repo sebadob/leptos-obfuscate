@@ -33,3 +33,8 @@ view! { <ObfuscateEmail email /> }
 
 # Panics
 If the given String does not contain '@'
+
+## Leptos v0.6
+
+You can use this component with the current leptos v0.6 beta. There is no prerelease version, but you can refer to this 
+git repo's main branch with `leptos-obfuscate = { git = "https://github.com/sebadob/leptos-obfuscate" }`
