@@ -1,8 +1,8 @@
 [package]
 name = "leptos-obfuscate"
-version = "0.2.0-20240124"
+version = "0.2.0"
 edition = "2021"
-rust-version = "1.70.0"
+rust-version = "1.75.0"
 license = "MIT"
 authors = ["Sebastian Dobe <sebastiandobe@mailbox.org"]
 categories = ["wasm", "web-programming"]
@@ -12,4 +12,4 @@ readme = "README.md"
 repository = "https://github.com/sebadob/leptos-obfuscate"
 
 [dependencies]
-leptos = { version = "0.6.0-beta", features = [] }
+leptos = { version = "0.6.5", features = [] }
