@@ -1,4 +1,4 @@
-// Copyright 2023 Sebastian Dobe <sebastiandobe@mailbox.org>
+// Copyright 2024 Sebastian Dobe <sebastiandobe@mailbox.org>
 
 #![doc = include_str!("../README.md")]
 
@@ -20,7 +20,7 @@ pub fn ObfuscateEmail(
     #[prop(default = "mailto:honeypot@example.com")] honeypot: &'static str,
     #[prop(default = 3)] delay_seconds: u64,
 ) -> impl IntoView {
-    let mailto = create_rw_signal(honeypot.to_string());
+    let mailto = RwSignal::new(honeypot.to_string());
 
     create_effect(move |_| {
         let mail = format!("mailto:{}", email.get());
