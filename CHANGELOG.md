@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.1
+
+Fixes a small debug console error showing up on component disposal
+
 ## v0.2.0
 
 Leptos v0.6 compatibility
