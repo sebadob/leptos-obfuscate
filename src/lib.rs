@@ -41,10 +41,10 @@ pub fn ObfuscateEmail(
     view! {
         <a href=move || mailto.get()>
             <span aria-label="E-Mail" class="obfuscate">
-                {two}
+                {move || two()}
                 <i>"%/#"</i>
                 <span></span>
-                {one}
+                {move || one()}
             </span>
         </a>
     }
