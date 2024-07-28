@@ -76,7 +76,7 @@ verfiy-is-clean: verify
 
 
 # sets a new git tag and pushes it
-release: verfiy-is-clean
+release: verify-is-clean
     #!/usr/bin/env bash
     set -euxo pipefail
 
