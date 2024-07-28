@@ -3,17 +3,20 @@
 This is for easy email address obfuscation to prevent bots and spammers.
 
 Add the following to your CSS stylesheet:
+
 ```css
 span.obfuscate {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  cursor: pointer;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    cursor: pointer;
 }
+
 span.obfuscate > i {
-  display: none;
+    display: none;
 }
+
 span.obfuscate > span::after {
-  content: '@';
+    content: '@';
 }
 ```
 
@@ -32,13 +35,18 @@ view! { <ObfuscateEmail email /> }
 ```
 
 # Panics
+
 If the given String does not contain '@'
 
 ## Leptos Compatibility
 
+### Leptos v0.7
+
+leptos-obfuscate v0.3+
+
 ### Leptos v0.6
 
-leptos-obfuscate v0.2+
+leptos-obfuscate v0.2
 
 ### Leptos v0.5
 
