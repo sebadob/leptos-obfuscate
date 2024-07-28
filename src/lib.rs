@@ -3,7 +3,7 @@
 #![doc = include_str!("../README.md")]
 
 use core::time::Duration;
-use leptos::*;
+use leptos::prelude::*;
 
 /// The component accepts an optional honeypot email address / link you can use, if you want to have a
 /// sophisticated setup and blacklist any sender that sends an E-Mail to it.
@@ -22,7 +22,7 @@ pub fn ObfuscateEmail(
 ) -> impl IntoView {
     let mailto = RwSignal::new(honeypot.to_string());
 
-    create_effect(move |_| {
+    Effect::new(move |_| {
         let mail = format!("mailto:{}", email.get());
         set_timeout(move || mailto.set(mail), Duration::from_secs(delay_seconds));
     });

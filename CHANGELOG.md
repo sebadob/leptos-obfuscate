@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.0
+
+Leptos v0.7 compatibility
+
 ## v0.2.0
 
 Leptos v0.6 compatibility
