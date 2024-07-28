@@ -65,7 +65,7 @@ verify: check test build msrv-verify
 
 
 # makes sure everything is fine
-verfiy-is-clean: verify
+verify-is-clean: verify
     #!/usr/bin/env bash
     set -euxo pipefail
 
@@ -88,7 +88,7 @@ release: verify-is-clean
 
 
 # publishes the current version to cargo.io
-publish: verfiy-is-clean
+publish: verify-is-clean
     #!/usr/bin/env bash
     set -euxo pipefail
     cargo publish
