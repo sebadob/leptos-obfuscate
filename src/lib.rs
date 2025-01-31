@@ -17,7 +17,7 @@ use leptos::prelude::*;
 #[component]
 pub fn ObfuscateEmail(
     #[prop(into)] email: MaybeProp<String>,
-    #[prop(default = "mailto:honeypot@zolaspawproject.org.za")] honeypot: &'static str,
+    #[prop(default = "mailto:honeypot@example.com")] honeypot: &'static str,
     #[prop(default = 3)] delay_seconds: u64,
 ) -> impl IntoView {
     let mailto = RwSignal::new(honeypot.to_string());
