@@ -10,14 +10,12 @@ setup:
 
     cargo install cargo-msrv
 
-
 clippy:
     #!/usr/bin/env bash
     set -euxo pipefail
     clear
 
     cargo clippy
-
 
 # clippy lint + check with minimal versions from nightly
 check:
@@ -29,18 +27,15 @@ check:
     echo 'Clippy with defaults'
     cargo +nightly clippy -- -D warnings
 
-
 # prints out the currently set version
 version:
-    echo {{TAG}}
-
+    echo {{ TAG }}
 
 # builds the code
 build:
     #!/usr/bin/env bash
     set -euxo pipefail
     cargo build --release --target wasm32-unknown-unknown
-
 
 # runs the full set of tests
 test:
@@ -49,20 +44,16 @@ test:
     clear
     cargo test
 
-
 # verifies the MSRV
 msrv-verify:
     cargo msrv verify
 
-
 # find's the new MSRV, if it needs a bump
 msrv-find:
-    cargo msrv --min 1.75.0
-
+    cargo msrv find --min 1.76.0
 
 # verify thats everything is good
 verify: check test build msrv-verify
-
 
 # makes sure everything is fine
 verify-is-clean: verify
@@ -74,7 +65,6 @@ verify-is-clean: verify
 
     echo all good
 
-
 # sets a new git tag and pushes it
 release: verify-is-clean
     #!/usr/bin/env bash
@@ -85,7 +75,6 @@ release: verify-is-clean
 
     git tag "v$TAG"
     git push origin "v$TAG"
-
 
 # publishes the current version to cargo.io
 publish: verify-is-clean

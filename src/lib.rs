@@ -23,17 +23,17 @@ pub fn ObfuscateEmail(
     let mailto = RwSignal::new(honeypot.to_string());
 
     Effect::new(move |_| {
-        let mail = format!("mailto:{}", email.get());
+        let mail = format!("mailto:{}", email.get().unwrap_or_default());
         set_timeout(move || mailto.set(mail), Duration::from_secs(delay_seconds));
     });
 
     let one = move || {
-        let plain = email.get();
+        let plain = email.get().unwrap_or_default();
         let (one, _) = plain.split_once('@').unwrap();
         one.chars().rev().collect::<String>()
     };
     let two = move || {
-        let plain = email.get();
+        let plain = email.get().unwrap_or_default();
         let (_, two) = plain.split_once('@').unwrap();
         two.chars().rev().collect::<String>()
     };
