@@ -12,4 +12,4 @@ readme = "README.md"
 repository = "https://github.com/sebadob/leptos-obfuscate"
 
 [dependencies]
-leptos = { version = "0.7.5", features = [] }
+leptos = { version = "0.7", features = [] }
