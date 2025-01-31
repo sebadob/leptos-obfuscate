@@ -16,7 +16,7 @@ use leptos::prelude::*;
 /// If the given String does not contain '@'
 #[component]
 pub fn ObfuscateEmail(
-    email: ReadSignal<String>,
+    #[prop(into)] email: MaybeProp<String>,
     #[prop(default = "mailto:honeypot@example.com")] honeypot: &'static str,
     #[prop(default = 3)] delay_seconds: u64,
 ) -> impl IntoView {
