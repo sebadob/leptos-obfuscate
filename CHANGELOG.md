@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.4.0
+
+- `leptos` has been bumped to stable `0.7` release and the MSRV to `1.76.0`
+- `email` is now using `#[prop(into)]` for ease of use
+
 ## v0.3.0
 
 Leptos v0.7 compatibility
