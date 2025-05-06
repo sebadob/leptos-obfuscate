@@ -40,9 +40,13 @@ If the given String does not contain '@'
 
 ## Leptos Compatibility
 
+### Leptos v0.8
+
+leptos-obfuscate v0.5+
+
 ### Leptos v0.7
 
-leptos-obfuscate v0.3+
+leptos-obfuscate v0.3 + v0.4
 
 ### Leptos v0.6
 
