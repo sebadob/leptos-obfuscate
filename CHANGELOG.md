@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.0
+
+Brings Leptops `0.8` compatibility.
+
 ## v0.4.0
 
 - `leptos` has been bumped to stable `0.7` release and the MSRV to `1.76.0`
